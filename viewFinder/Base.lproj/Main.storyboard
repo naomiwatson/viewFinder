@@ -13,7 +13,7 @@
         <!--View Finder-->
         <scene sceneID="5cC-9L-Z7o">
             <objects>
-                <tableViewController id="Tos-AK-KCN" sceneMemberID="viewController">
+                <tableViewController id="Tos-AK-KCN" customClass="PhotoTableViewController" customModule="viewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F3H-0x-7ot">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="25950450-cartoon-vector-illustration-of-a-little-black-digital-camera-with-a-smiling-face-isolated-on-white" translatesAutoresizingMaskIntoConstraints="NO" id="nKN-hy-nJV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="nKN-hy-nJV" customClass="image">
                                 <rect key="frame" x="56" y="135" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -63,6 +63,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Save This Photo"/>
+                                <connections>
+                                    <action selector="savePhotoTapped:" destination="k7a-sy-aWL" eventType="touchUpInside" id="0xs-4V-xEB"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8gs-wO-K7K">
                                 <rect key="frame" x="128" y="296" width="97" height="30"/>
@@ -95,6 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="Y2R-mL-heL"/>
                     <connections>
+                        <outlet property="captionText" destination="8gs-wO-K7K" id="C55-vS-Voe"/>
                         <outlet property="imageView" destination="nKN-hy-nJV" id="xek-Fb-Q2w"/>
                     </connections>
                 </viewController>
@@ -122,6 +126,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="25950450-cartoon-vector-illustration-of-a-little-black-digital-camera-with-a-smiling-face-isolated-on-white" width="1300" height="1099"/>
+        <image name="image" width="1300" height="1099"/>
     </resources>
 </document>

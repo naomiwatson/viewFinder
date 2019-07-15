@@ -49,7 +49,7 @@
         <!--Add New Photo-->
         <scene sceneID="KtK-Ka-WMg">
             <objects>
-                <viewController id="k7a-sy-aWL" sceneMemberID="viewController">
+                <viewController id="k7a-sy-aWL" customClass="AddPhotoViewController" customModule="viewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JRY-Nt-gYm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,22 +72,31 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6O-cS-Qna">
-                                <rect key="frame" x="43" y="497" width="75" height="39"/>
+                                <rect key="frame" x="43" y="497" width="75" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="k7a-sy-aWL" eventType="touchUpInside" id="T6l-6S-Fql"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsN-8B-Q9m">
                                 <rect key="frame" x="237" y="502" width="73" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="albumsTapped:" destination="k7a-sy-aWL" eventType="touchUpInside" id="WMv-Dz-ron"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HQF-Pz-S0T"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="Y2R-mL-heL"/>
+                    <connections>
+                        <outlet property="imageView" destination="nKN-hy-nJV" id="xek-Fb-Q2w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBs-5m-7DN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

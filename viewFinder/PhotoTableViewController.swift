@@ -41,7 +41,7 @@ class PhotoTableViewController: UITableViewController {
         
         
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Naomi is AWEsomE"
+        cell.textLabel?.text = "Naomi"
         cell.imageView?.image = UIImage(named: "image"
         
         
